@@ -1,0 +1,14 @@
+body
+{
+	padding-top: 10px;
+}
+
+.ocultar
+{
+	visibility: collapse;
+}
+/*
+.ocultar:hover
+{
+	display: none;
+}*/

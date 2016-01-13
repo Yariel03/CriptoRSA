@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<script src="css/bootstrap/bootstrap.min.js"></script>
+	<script src="css/jquery/jquery-1.11.3.min.js"></script>
+	<script src="js/procesos.js"></script>
+
+
+
+
+
+
 	<title>RSA</title>
 </head>
 <body>
+
+
+	<div class="container">
+
+	<div class="alert alert-danger ocultar" id="ocultar">
+    	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    	<strong>OPS!</strong>
+    	Lo sentimos este número es Primo tiene que ingresar el resultado de la multiplicación de 2 números primos
+	</div>
+
+
+
+
+
+
+		<div >
+			<center><h1>RSA</h1></center>
+			<p>Algoritmo para encontrar los 2 factores primos que forman a un número </p>
+
+
+
+			<form  name="frm" method="post">
+
+
+
+
+					<label class="">Ingrese el número a descomponer</label>
+
+					<input
+
+					class="form-control"
+					name="txtnum"
+
+					>
+
+
+
+				<input
+				type="submit"
+				value="Encontrar los factores"
+				class="btn btn-primary"
+				onclick="primo(txtnum)">
+				<br>
+				<br>
+
+				<input name="txtr" type="text">
+				<div id="textDiv"></div>
+			</form>
+		</div>
+
+
+
+
+
+	</div>
+
 
 </body>
 </html>
