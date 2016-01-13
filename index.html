@@ -1,78 +1,74 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-	<script src="css/bootstrap/bootstrap.min.js"></script>
-	<script src="css/jquery/jquery-1.11.3.min.js"></script>
-	<script src="js/procesos.js"></script>
+<html>
+  <head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+<script src="js/funcion.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+   <div class="container">
+   	<div class="jumbotron">
+   		<center><h1>Rsa</h1>
+  <p><kbd>Algoritmo para encontrar los 2 factores primos que forman a un número<kbd></p>
+
+    	</center>
 
 
 
 
+    	<form name="frm" role="form" class="form-horizontal">
 
 
-	<title>RSA</title>
-</head>
-<body>
+  		<div class="col-sm-6">
+
+  		<input type="number"
+  		min="9"
+  		class="form-control"
+  		name="txtnum1"
+  		placeholder="Ingrese el numero"
+  		 onkeypress="return pulsar(event)"/>
+  		</div>
+  		<br>
+  		<br>
+
+    	<input type="button"
+    	onclick="primo(txtnum1)"
+    	value="Calcular factores"
+    	class="btn btn-primary btn-md"/>
+    	<a href="index.html">
+    		<br>
+    		<br>
+    	<input type="button"
+    	onclick="primo(txtnum1)"
+    	value="Volver a intentar"
+    	class="btn btn-info btn-md"/>
+    	</a>
+
+     <br>
+     <h4>
+
+      <div
+    id="lblr2">
+
+    </div>
+
+     </h4>
+      </form>
+
+   	</div>
+
+   	<div class="alert alert-info">
+  <strong>Recomendaciones!</strong>
+
+   		<p>1. Ingrese un número minimo el número 9</p>
+   		<p>2. El número ingresado debe ser la multiplicación de 2 números primos</p>
+   		<p>3. El número ingresado no debe ser un número primo</p>
+   		<p>4. Tome en cuenta que si es un número muy grande va a tardar un tiempo en dar la solución</p>
 
 
-	<div class="container">
+</div>
 
-	<div class="alert alert-danger ocultar" id="ocultar">
-    	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    	<strong>OPS!</strong>
-    	Lo sentimos este número es Primo tiene que ingresar el resultado de la multiplicación de 2 números primos
-	</div>
-
-
-
-
-
-
-		<div >
-			<center><h1>RSA</h1></center>
-			<p>Algoritmo para encontrar los 2 factores primos que forman a un número </p>
-
-
-
-			<form  name="frm" method="post">
-
-
-
-
-					<label class="">Ingrese el número a descomponer</label>
-
-					<input
-
-					class="form-control"
-					name="txtnum"
-
-					>
-
-
-
-				<input
-				type="submit"
-				value="Encontrar los factores"
-				class="btn btn-primary"
-				onclick="primo(txtnum)">
-				<br>
-				<br>
-
-				<input name="txtr" type="text">
-				<div id="textDiv"></div>
-			</form>
-		</div>
-
-
-
-
-
-	</div>
-
-
-</body>
+   </div>
+   <footer> <p><kbd>Programador: Alexander Baldeon 5767<kbd></p></footer>
+  </body>
 </html>

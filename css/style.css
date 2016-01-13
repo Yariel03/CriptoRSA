@@ -1,6 +1,6 @@
 body
 {
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .ocultar
@@ -12,3 +12,15 @@ body
 {
 	display: none;
 }*/
+
+
+#lblr2{
+	width: 50px
+}
+
+form
+{
+	width: 50%;
+	margin: auto;
+
+}
