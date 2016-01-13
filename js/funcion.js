@@ -1,106 +1,114 @@
-function pulsar(e) { 							     /*Alexander Baldeon*/
-  tecla = (document.all) ? e.keyCode :e.which;      /*Alexander Baldeon*/
-  return (tecla!=13);      /*Alexander Baldeon*/
-}      /*Alexander Baldeon*/
-     /*Alexander Baldeon*/
-
-function proceso(n)     /*Alexander Baldeon*/
-{	var div=document.getElementById("lblr1");     /*Alexander Baldeon*/
-	var div=document.getElementById("lblr2");     /*Alexander Baldeon*/
-	var band=0;     /*Alexander Baldeon*/
- 	var primos=new Array();     /*Alexander Baldeon*/
-
-	for(i=1;i<=n;i++)     /*Alexander Baldeon*/
-	{     /*Alexander Baldeon*/
-		for(j=1;j<=i;j++)     /*Alexander Baldeon*/
-		{     /*Alexander Baldeon*/
-     /*Alexander Baldeon*/
-			if(i%j===0)     /*Alexander Baldeon*/
-			{     /*Alexander Baldeon*/
-				band++;     /*Alexander Baldeon*/
-			}     /*Alexander Baldeon*/
-     /*Alexander Baldeon*/
-
-		}     /*Alexander Baldeon*/
-
-		if(band===2)     /*Alexander Baldeon*/
-		{     /*Alexander Baldeon*/
+function pulsar(e) {
+  tecla = (document.all) ? e.keyCode :e.which;
+  return (tecla!=13);
+}
 
 
-			primos[i]=i;     /*Alexander Baldeon*/
-
-
-		}     /*Alexander Baldeon*/
-
-
-
-
-		band=0;     /*Alexander Baldeon*/
-
-	}     /*Alexander Baldeon*/
-     /*Alexander Baldeon*/
- 	var f1;     /*Alexander Baldeon*/
- 	var f2;     /*Alexander Baldeon*/
- 	var m;     /*Alexander Baldeon*/
- 	for(i=2;i<=n;i++)     /*Alexander Baldeon*/
-	{     /*Alexander Baldeon*/
-		for(j=3;j<     /*Alexander Baldeon*/;j++)     /*Alexander Baldeon*/
-		{     /*Alexander Baldeon*/
-			m=primos[i]*primos[j];     /*Alexander Baldeon*/
-			if(m===n)     /*Alexander Baldeon*/
-			{
-				div.textContent="Factor N1= "+primos[i]+" ********* "+"Factor N2= "+primos[j];     /*Alexander Baldeon*/
-
-
-				i=n;     /*Alexander Baldeon*/
-				j=n;     /*Alexander Baldeon*/
-			}     /*Alexander Baldeon*/
-		}     /*Alexander Baldeon*/
-	}     /*Alexander Baldeon*/
-
-}     /*Alexander Baldeon*/
-
-
-
-function primo(n1)     /*Alexander Baldeon*/
+function proceso(n)
 {
-	var num1=parseFloat(n1.value);     /*Alexander Baldeon*/
-	var band=0;     /*Alexander Baldeon*/
+	var div=document.getElementById("lblr2");
+	var band=0;
+ 	var primos=new Array();
 
-	for(i=1;i<=num1;i++)     /*Alexander Baldeon*/
-	{     /*Alexander Baldeon*/
-		if((num1%i) === 0)     /*Alexander Baldeon*/
-		{     /*Alexander Baldeon*/
-			band++;     /*Alexander Baldeon*/
-		}     /*Alexander Baldeon*/
-	}     /*Alexander Baldeon*/
-
-	var div=document.getElementById("lblr2");     /*Alexander Baldeon*/
-	if(band==2)     /*Alexander Baldeon*/
-	{     /*Alexander Baldeon*/
-
-
-		alert("El número ingresado es primo intente nuevamente");     /*Alexander Baldeon*/
-
-
-
-	}     /*Alexander Baldeon*/
-	else     /*Alexander Baldeon*/
-	{     /*Alexander Baldeon*/
-
-		if(num1 <9)     /*Alexander Baldeon*/
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
 		{
-		alert("El número debe ser mayor o igual a 9");     /*Alexander Baldeon*/
 
-		}else{     /*Alexander Baldeon*/
+			if(i%j===0)
+			{
+				band++;
+			}
 
-		proceso(num1);     /*Alexander Baldeon*/
-		}     /*Alexander Baldeon*/
 
-	}     /*Alexander Baldeon*/
-     /*Alexander Baldeon*/
-	band=0;     /*Alexander Baldeon*/
+		}
 
-}     /*Alexander Baldeon*/
+		if(band===2)
+		{
+
+
+			primos[i]=i;
+
+
+		}
+
+
+
+
+		band=0;
+
+	}
+
+ 	var f1;
+ 	var f2;
+ 	var m;
+ 	for(i=2;i<=n;i++)
+	{
+		for(j=2;j<n     ;j++)
+		{
+			m=primos[i]*primos[j];
+			if(m===n)
+			{
+				div.textContent="Factor N1= "+primos[i]+" ********* "+"Factor N2= "+primos[j];
+
+
+				i=n;
+				j=n;
+			}
+		}
+	}
+
+}
+
+
+
+function primo(n1)
+{
+	var num1=parseFloat(n1.value);
+	var band=0;
+
+	for(i=1;i<=num1;i++)
+	{
+		if((num1%i) === 0)
+		{
+			band++;
+		}
+	}
+
+	var div=document.getElementById("lblr2");
+	if(band==2)
+	{
+
+
+		alert("El número ingresado es primo intente nuevamente");
+
+
+
+	}
+	else
+	{
+
+		if((num1) <2 )
+		{
+		alert("El rango es de 2 a 10000");
+
+		}
+
+		if((num1) >10000 )
+		{
+		alert("El rango es de 9 a 10000");
+
+		}
+		else
+		{
+
+		proceso(num1);
+		}
+
+	}
+
+	band=0;
+
+}
 
 
